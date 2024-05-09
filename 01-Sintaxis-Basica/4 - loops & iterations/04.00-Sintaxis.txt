@@ -1,0 +1,18 @@
+--WHILE--
+
+while (condition){
+  // statements
+}
+
+
+--DO WHILE--
+
+do {
+  // statements
+} while (condition)
+
+--FOR--
+
+for (initialize; condition-expression; final-expresion){
+	//statements
+}
