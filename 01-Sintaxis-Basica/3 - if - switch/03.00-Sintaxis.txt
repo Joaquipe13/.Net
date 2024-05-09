@@ -1,0 +1,25 @@
+--IF ELSE--
+
+if (boolean condition){
+  //if block
+} else {
+  //else block
+}
+
+
+--SWITCH--
+
+switch (expression){
+  case value1:
+    //block 1
+    break;
+  case value2:
+    //block 1
+    break;
+  case value3:
+    //block 1
+    break;
+  default:
+    //default block
+    break;
+}
