@@ -1,13 +1,31 @@
-//Hacer un método que reciba un objeto (en terminos de javascript) y me imprima por consola toda la cadena de prototipos hasta llegar a null.
-let obj = {}
+//Hacer un método que reciba un objeto  y me imprima por consola toda la cadena de prototipos hasta llegar a null.
+const sam = {
+    firstName: 'Sam',
+    lastName: 'Clemens',
+    age: 25,
+    greet() {
+      return `Hello, I'm ${this.firstName} ${this.lastName}`;
+    },
+  };
+  
+const mark = {
+    firstName: 'Mark',
+    lastName: 'Twain',
+    quote: 'Never argue with stupid people, they will drag you down to their level and then beat you with experience.',
+    sayQuote() {
+    return `"${this.quote}". ${this.firstName} ${this.lastName}`;
+    },
+    __proto__: sam,
+};
+
 function printPrototypeChain(obj) {
     let proto = Object.getPrototypeOf(obj);
     if (proto === null) {
-        console.log(obj);
+        console.log(proto);
         return;
     }
-    console.log(obj);
+    console.log(proto);
     printPrototypeChain(proto);
 }
 
-printPrototypeChain(obj)
+printPrototypeChain(mark)
