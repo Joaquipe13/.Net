@@ -1,0 +1,13 @@
+//Hacer un método que reciba un objeto (en terminos de javascript) y me imprima por consola toda la cadena de prototipos hasta llegar a null.
+let obj = {}
+function printPrototypeChain(obj) {
+    let proto = Object.getPrototypeOf(obj);
+    if (proto === null) {
+        console.log(obj);
+        return;
+    }
+    console.log(obj);
+    printPrototypeChain(proto);
+}
+
+printPrototypeChain(obj)
